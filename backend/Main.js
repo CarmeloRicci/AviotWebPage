@@ -63,7 +63,7 @@ io.sockets.on('connection', function (socket) {
 })
 
 const pubApiFrontendRoute = require('./routes/frontendRoutes');
-server.use('/leases', pubApiFrontendRoute);
+server.use('/frontend', pubApiFrontendRoute);
 
 server.listen(5000)
 

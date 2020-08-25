@@ -3,7 +3,7 @@ import * as express from 'express';
 const _ = require('lodash');
 const router = express.Router();
 
-router.post('/getallelements', async (req, res) => {
+router.post('/allelements', async (req, res) => {
     const body = req.body;
     //var ip = req.connection.remoteAddress.split(":")[((req.connection.remoteAddress.split(":")).length)-1]
     try {
