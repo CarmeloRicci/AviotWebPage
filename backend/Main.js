@@ -24,6 +24,7 @@ var express = require('express')
 var app = express()
 var server = require("http").Server(app)
 var io = require("socket.io")(server)
+const request = require('request');
 
 io.sockets.on('connection', function (socket) {
 
@@ -35,6 +36,39 @@ io.sockets.on('connection', function (socket) {
         console.log("Mesasggio_di_Benvenuto", "Ciao " + Nome + " sei nel sito di gestione di Aviot");
 
     })
- 
-})   
+
+    socket.on("GetAllElements", function (message) {
+
+        const options = {
+            url: 'https://reqres.in/api/users',
+            json: true,
+            body: {
+                name: 'John Doe',
+                job: 'Content Writer'
+            }
+        };
+
+        request.post(options, (err, res, body) => {
+            if (err) {
+                return console.log(err);
+            }
+            console.log(`Status: ${res.statusCode}`);
+            socket.emit("AllElements", body);
+            console.log("AllElements", body);
+        });
+
+        document.getElementById('Welcome').innerHTML = message;
+    })
+
+})
+
+const pubApiFrontendRoute = require('./routes/frontendRoutes');
+server.use('/leases', pubApiFrontendRoute);
+
 server.listen(5000)
+
+
+
+
+
+

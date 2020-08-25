@@ -37,10 +37,16 @@
         var username = prompt('Inserisci Nome');
         socket.emit('Risposta1', username);
 
-
         socket.on("Mesasggio_di_Benvenuto", function(message) {
             document.getElementById('Welcome').innerHTML = message;
         })
+
+        socket.on("GetAllElements", function(message) {
+            
+            document.getElementById('Welcome').innerHTML = message;
+        })
+
+
     </script>
 </body>
 
