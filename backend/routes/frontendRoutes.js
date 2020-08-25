@@ -1,7 +1,10 @@
+
+
+
+const request = require('request');
 const config = require('config');
-import * as express from 'express';
-const _ = require('lodash');
-const router = express.Router();
+var express = require('express')
+var router = express.Router()
 
 router.post('/allelements', async (req, res) => {
     const body = req.body;
