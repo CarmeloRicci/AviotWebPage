@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aviot</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+
+    <link rel='stylesheet' href='css/style.css' type='text/css'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Il Tuo Carrello</h1>
+        <h2> Benvenuto
+            <a id="Nome"></a> il tuo saldo è
+            <a id="Saldo"></a> €</h2>
+    </div>
+    <div class="cart-container">
+        <ul class="cart">
+            <li class="product" data-price="4.9" data-quantity="2">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/sidebar-cupcake.png" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            Cupcake
+                        </div>
+                        <div class="product-price">
+                            € 4.90
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x2
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+            <li class="product" data-price="3.5" data-quantity="1">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/ponytails-coffee-time-coffee-cup3.png" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            Coffee
+                        </div>
+                        <div class="product-price">
+                            € 3.50
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x1
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+            <li class="product" data-price="5.7" data-quantity="3">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/Chocolate.png" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            Chocolate
+                        </div>
+                        <div class="product-price">
+                            € 5.70
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x3
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+            <li class="product" data-price="6.9" data-quantity="1">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/waffle-homestyle.png" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            Waffle
+                        </div>
+                        <div class="product-price">
+                            € 6.90
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x1
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+            <li class="product" data-price="3.9" data-quantity="2">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/donuts.jpg" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            Donuts
+                        </div>
+                        <div class="product-price">
+                            € 3.90
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x2
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+            <li class="product" data-price="6.5" data-quantity="1">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/raspberry-sorbet.gif" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            Sorbet
+                        </div>
+                        <div class="product-price">
+                            € 6.50
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x1
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+            <li class="product" data-price="1.8" data-quantity="3">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/croissant-psd49504.png" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            French Croissant
+                        </div>
+                        <div class="product-price">
+                            € 1.80
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x3
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+            <li class="product" data-price="2.5" data-quantity="1">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/Macaron.png" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            Macaron
+                        </div>
+                        <div class="product-price">
+                            € 2.50
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x1
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+            <li class="product" data-price="2.5" data-quantity="1">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/millefeuille-vanille.jpg" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            Mille-feuille
+                        </div>
+                        <div class="product-price">
+                            € 12.90
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x1
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+            <li class="product" data-price="9.9" data-quantity="1">
+                <div class="product-preview">
+                    <div class="thumbnail">
+                        <img class="image" src="https://s.cdpn.io/24822/tarte-au-citron.jpg" />
+                    </div>
+                    <div class="product-paper">
+                        <div class="product-name">
+                            Lemon Pie
+                        </div>
+                        <div class="product-price">
+                            € 9.90
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    x1
+                </div>
+                <div class="product-interactions">
+                    <div class="button plus">
+                        +
+                    </div>
+                    <div class="button minus">
+                        -
+                    </div>
+                    <div class="button del"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <table class="bill">
+        <tr class="total">
+            <td class="label">
+                Total :
+            </td>
+            <td class="value">
+                € 71.90
+            </td>
+        </tr>
+    </table>
+
+    <div class="actions">
+        <div class="big-button go" id="paga">
+            Paga!
+        </div>
+    </div>
+
+    <div class="actions">
+        <div class="big-button return" id="exit">
+            Exit
+        </div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src="js/index.js"></script>
+    <script>
+        var totale = 71.90;
+
+        function updateBill() {
+            var subtotal = 0;
+            var salestax = 0;
+            var shipping = 5;
+            var total = 0;
+            $('.product').each(function() {
+                subtotal += $(this).data('quantity') * $(this).data('price');
+            });
+            salestax = subtotal;
+            this.totale = total = subtotal;
+            $('.subtotal .value').text('€ ' + subtotal.toFixed(2));
+            $('.salestax .value').text('€ ' + salestax.toFixed(2));
+            $('.total .value').text('€ ' + total.toFixed(2));
+        }
+    </script>
+
+
+    <p><input type="button" value="Poke the server" id="poke" /></p>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function demo() {
+            console.log('Taking a break...');
+            await sleep(2000);
+            console.log('Two seconds later, showing sleep in a loop...');
+
+            // Sleep in loop
+            for (let i = 0; i < 5; i++) {
+                if (i === 3)
+                    await sleep(2000);
+                console.log(i);
+            }
+        }
+
+        var socket = io.connect('http://localhost:9000');
+
+        // Creare una socket.username
+
+        var username = prompt('Inserisci il Codice Random');
+        socket.emit('Risposta1', username);
+
+        socket.on("Allert", function(message) {
+            var username = prompt(message + ' Inserisci il Codice Random');
+            socket.emit('Risposta1', username);
+        })
+
+        socket.on("Nome_Utente", function(message) {
+            document.getElementById('Nome').innerHTML = message;
+        })
+        socket.on("Saldo_Utente", function(message) {
+            document.getElementById('Saldo').innerHTML = message;
+        })
+
+        socket.on("Pagato", function(message) {
+            console.log("Mess --> : " + message);
+
+            if (message == "Si") {
+                document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Loading Indicator</title><link rel="stylesheet" href="css/style1.css"></head><body><div class="container"><h1>Pagamento Approvato</h1></div></body></html>');
+            } else {
+                document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Loading Indicator</title><link rel="stylesheet" href="css/style1.css"></head><body><div class="container"><h1>Pagamento non Approvato</h1></div></body></html>');
+            }
+
+        })
+
+        $('#paga').click(function() {
+
+            alert("Richiesta di pagamento inviata");
+            socket.emit('Risposta3', totale);
+
+
+            setTimeout(func, 8000);
+
+            function func() {
+                socket.emit('Risposta4', totale);
+
+
+            }
+
+
+
+
+
+            //location.href = 'paga.html';
+
+
+
+            //var username1 = prompt('Prova');
+            // socket.emit('Risposta2', totale);
+        })
+
+        $('#exit').click(function() {
+            location.reload();
+        });
+    </script>
+</body>
+
+</html>

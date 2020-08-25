@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aviot</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+
+    <link rel='stylesheet' href='css/style.css' type='text/css'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div>
+        <h1>Aviot</h1>
+        <h2> Benvenuto
+            <a id="Nome"></a>ß
+    </div>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    
+    <script>
+
+        var socket = io.connect('http://localhost:9000');
+
+
+        var username = prompt('Inserisci il Codice Random');
+        socket.emit('Risposta1', username);
+
+        socket.on("Allert", function(message) {
+            var username = prompt(message + ' Inserisci il Codice Random');
+            socket.emit('Risposta1', username);
+        })
+
+
+        socket.on("Mesasggio_di_Benvenuto", function(message) {
+            document.getElementById('Welcom').innerHTML = message;
+        })
+
+
+        socket.on("Pagato", function(message) {
+            console.log("Mess --> : " + message);
+
+            if (message == "Si") {
+                document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Loading Indicator</title><link rel="stylesheet" href="css/style1.css"></head><body><div class="container"><h1>Pagamento Approvato</h1></div></body></html>');
+            } else {
+                document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Loading Indicator</title><link rel="stylesheet" href="css/style1.css"></head><body><div class="container"><h1>Pagamento non Approvato</h1></div></body></html>');
+            }
+
+        })
+
+        $('#paga').click(function() {
+
+            alert("Richiesta di pagamento inviata");
+            socket.emit('Risposta3', totale);
+
+
+            setTimeout(func, 8000);
+
+            function func() {
+                socket.emit('Risposta4', totale);
+
+
+            }
+
+
+
+
+
+            //location.href = 'paga.html';
+
+
+
+            //var username1 = prompt('Prova');
+            // socket.emit('Risposta2', totale);
+        })
+
+        $('#exit').click(function() {
+            location.reload();
+        });
+    </script>
+</body>
+
+</html>
