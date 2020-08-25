@@ -29,12 +29,13 @@ io.sockets.on('connection', function(socket, username) {
 
     console.log("Nuovo utente connesso")
 
-    socket.on('Risposta1', function(Codice_Random) {
+    socket.on('Risposta1', function(Nome) {
         
-                socket.emit("Mesasggio_di_Benvenuto", "Ciao sei nel sito di gestione di Aviot");
+                socket.emit("Mesasggio_di_Benvenuto", "Ciao " + Nome + " sei nel sito di gestione di Aviot");
 
 })
 
 
 
 server.listen(5000)
+})

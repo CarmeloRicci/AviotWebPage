@@ -34,13 +34,8 @@
         var socket = io.connect('http://localhost:9000');
 
 
-        var username = prompt('Inserisci il Codice Random');
+        var username = prompt('Inserisci Nome');
         socket.emit('Risposta1', username);
-
-        socket.on("Allert", function(message) {
-            var username = prompt(message + ' Inserisci il Codice Random');
-            socket.emit('Risposta1', username);
-        })
 
 
         socket.on("Mesasggio_di_Benvenuto", function(message) {
