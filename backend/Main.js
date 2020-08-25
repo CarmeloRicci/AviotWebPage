@@ -25,7 +25,7 @@ var app = express()
 var server = require("http").Server(app)
 var io = require("socket.io")(server)
 
-io.sockets.on('connection', function (socket, username) {
+io.sockets.on('connection', function (socket) {
 
     console.log("Nuovo utente connesso")
 
