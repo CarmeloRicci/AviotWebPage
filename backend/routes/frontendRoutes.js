@@ -2,7 +2,6 @@
 
 
 const request = require('request');
-const config = require('config');
 var express = require('express')
 var router = express.Router()
 
