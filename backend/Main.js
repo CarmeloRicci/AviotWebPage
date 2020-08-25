@@ -32,6 +32,7 @@ io.sockets.on('connection', function (socket) {
     socket.on('Risposta1', function (Nome) {
 
         socket.emit("Mesasggio_di_Benvenuto", "Ciao " + Nome + " sei nel sito di gestione di Aviot");
+        console.log("Mesasggio_di_Benvenuto", "Ciao " + Nome + " sei nel sito di gestione di Aviot");
 
     })
  
