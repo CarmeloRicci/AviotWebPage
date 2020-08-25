@@ -34,7 +34,6 @@ io.sockets.on('connection', function (socket) {
         socket.emit("Mesasggio_di_Benvenuto", "Ciao " + Nome + " sei nel sito di gestione di Aviot");
 
     })
-
-
-    server.listen(5000)
-})
+ 
+})   
+server.listen(5000)
