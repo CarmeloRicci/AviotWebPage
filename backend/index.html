@@ -41,48 +41,6 @@
         socket.on("Mesasggio_di_Benvenuto", function(message) {
             document.getElementById('Welcome').innerHTML = message;
         })
-
-
-        socket.on("Pagato", function(message) {
-            console.log("Mess --> : " + message);
-
-            if (message == "Si") {
-                document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Loading Indicator</title><link rel="stylesheet" href="css/style1.css"></head><body><div class="container"><h1>Pagamento Approvato</h1></div></body></html>');
-            } else {
-                document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Loading Indicator</title><link rel="stylesheet" href="css/style1.css"></head><body><div class="container"><h1>Pagamento non Approvato</h1></div></body></html>');
-            }
-
-        })
-
-        $('#paga').click(function() {
-
-            alert("Richiesta di pagamento inviata");
-            socket.emit('Risposta3', totale);
-
-
-            setTimeout(func, 8000);
-
-            function func() {
-                socket.emit('Risposta4', totale);
-
-
-            }
-
-
-
-
-
-            //location.href = 'paga.html';
-
-
-
-            //var username1 = prompt('Prova');
-            // socket.emit('Risposta2', totale);
-        })
-
-        $('#exit').click(function() {
-            location.reload();
-        });
     </script>
 </body>
 

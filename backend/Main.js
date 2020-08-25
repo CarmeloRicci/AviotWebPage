@@ -25,17 +25,16 @@ var app = express()
 var server = require("http").Server(app)
 var io = require("socket.io")(server)
 
-io.sockets.on('connection', function(socket, username) {
+io.sockets.on('connection', function (socket, username) {
 
     console.log("Nuovo utente connesso")
 
-    socket.on('Risposta1', function(Nome) {
-        
-                socket.emit("Mesasggio_di_Benvenuto", "Ciao " + Nome + " sei nel sito di gestione di Aviot");
+    socket.on('Risposta1', function (Nome) {
 
-})
+        socket.emit("Mesasggio_di_Benvenuto", "Ciao " + Nome + " sei nel sito di gestione di Aviot");
+
+    })
 
 
-
-server.listen(5000)
+    server.listen(5000)
 })
